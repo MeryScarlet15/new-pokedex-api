@@ -1,0 +1,42 @@
+type Pokemon {
+  number: Int
+  name: String
+  sprite: String
+  type: [String]
+}
+
+type User {
+  id: ID
+  name: String
+  lastName: String
+  user: String
+  password: String
+}
+
+type Token {
+  token: String
+}
+
+input UserInput {
+  id: ID
+  name: String!
+  lastName: String!
+  user: String!
+  password: String!
+}
+
+input UserAuthInput {
+  user: String!
+  password: String!
+}
+
+type Query  {
+  getUsers:[User]
+  getActualUser: User
+  getPokemon: [Pokemon]
+}
+
+type Mutation {
+  createUser(input: UserInput) : User
+  userAuth(input: UserAuthInput): Token
+}
