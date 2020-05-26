@@ -1,8 +1,7 @@
 import { getPokemonService } from "../../services/pokemon-services/get-pokemon";
 
-export const PokemonResolver = { 
-
+export const PokemonResolver = {
   Query: {
-    getPokemon: () => getPokemonService()
-  }
-}
+    getPokemon: async () => await getPokemonService(),
+  },
+};

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "build:db": "nodemon ./src/scripts/save-pokemon/save-pokemon.js --exec babel-node -e js"
   },
   "repository": {
     "type": "git",
